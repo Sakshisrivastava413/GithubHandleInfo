@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Github project</title>
+  	<!-- vue-cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- vue-resources-cdn for http requests -->
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+</head>
+<body>
+
+  <div id="app">
+    <center><h3>Github handle information</h3></center>
+    <input placeholder="enter github handle" v-model="input">
+    <button @click="init">submit</button>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <table>
+      <thead>
+        <tr>
+          <th>Repository Name</th>
+          <th>Stars</th>
+        </tr>
+      </thead>
+      <tbody v-for="repo in repos">
+        <tr>
+          <td><span>{{repo.name}}</span></td>
+          <td><span>{{repo.stargazers_count}}</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
