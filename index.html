@@ -20,6 +20,14 @@
     <br>
     <hr>
     <hr>
+    <div>
+      <img height="42" v-bind:src="userInfo.avatar_url" />
+      <h5>Name : {{userInfo.name}}</h5>
+      <h5>Bio : {{userInfo.bio}}</h5>
+      <h5>Followers : {{userInfo.followers}}</h5>
+      <h5>Following : {{userInfo.following}}</h5>
+      <h5>Total public repos : {{userInfo.public_repos}}</h5>
+    </div>
     <table>
       <thead>
         <tr>
